@@ -1,5 +1,5 @@
 body{
-    background-color: aqua;
+    background-color: blue;
 }
 #title_searchbox{
     display: flex;
@@ -8,7 +8,7 @@ body{
     align-items: center;
 }
 #title{
-    color: black;
+    color: white;
     font-size: xxx-large;
 }
 #searchbox{
@@ -17,7 +17,7 @@ body{
     justify-content: space-between;
 }
 #search{
-    background-color: blue;
+    background-color: black;
     color: white;
     width: 30%;
     font-size: large;
