@@ -1,15 +1,25 @@
+body{
+    background-color: aqua;
+}
 #title_searchbox{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 #title{
     color: black;
+    font-size: xxx-large;
+}
+#searchbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 #search{
     width: 30%;
+    font-size: large;
 }
 #box{
-    height: 200%;
+    font-size: x-large;
 }
