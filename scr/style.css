@@ -25,3 +25,18 @@ body{
 #box{
     font-size: x-large;
 }
+img{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#content_title{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
