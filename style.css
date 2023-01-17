@@ -17,6 +17,8 @@ body{
     justify-content: space-between;
 }
 #search{
+    background-color: blue;
+    color: white;
     width: 30%;
     font-size: large;
 }
