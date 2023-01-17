@@ -1,7 +1,7 @@
 const btn=document.getElementById("search")
 var value;
-const myclick=()=> {
+const searchGitHub=()=> {
     value=document.getElementById("box").value
     alert(value)
 }
-btn.addEventListener("click",myclick)
+btn.addEventListener("click",searchGitHub)
