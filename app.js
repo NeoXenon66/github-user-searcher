@@ -1,6 +1,6 @@
-let btn=document.getElementById("search")
-let value;
-let myclick=()=> {
+const btn=document.getElementById("search")
+var value;
+const myclick=()=> {
     value=document.getElementById("box").value
     alert(value)
 }
