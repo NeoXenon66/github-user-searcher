@@ -5,7 +5,6 @@ const searchGitHub=async()=> {
     value=document.getElementById("box").value
     const res=await fetch(`${url}${value}`)
     const json_data=await res.json()
-    console.log(json_data);
 
     document.getElementById("content_title").innerHTML=""
     document.getElementById("main_content").innerHTML=""
