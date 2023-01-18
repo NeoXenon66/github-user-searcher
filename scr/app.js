@@ -59,7 +59,7 @@ if (json_data.message!="Not Found") {
 	    }
 	    blog_portfolio.innerHTML="Blog/Portfolio"
 	    blog_portfolio.onclick=()=>{
-	      json_data.blog!="" || json_data.blog!=null?parent.open(`${json_data.blog}`):alert("They have no blog or portfolio")
+	      json_data.blog!="" && json_data.blog!=null?parent.open(`${json_data.blog}`):alert("They have no blog or portfolio")
 	    }
 	
 	    Github.className="SMLinks"
