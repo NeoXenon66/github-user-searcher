@@ -40,3 +40,18 @@ img{
     flex-direction: row;
     justify-content: flex-start;
 }
+#div1{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+#main_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.SMLinks{
+    font-size: large;
+    width: medium;
+}

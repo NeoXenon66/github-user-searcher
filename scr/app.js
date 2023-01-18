@@ -6,12 +6,74 @@ const searchGitHub=async()=> {
     const res=await fetch(`${url}${value}`)
     const json_data=await res.json()
     console.log(json_data);
-    const img=document.createElement("img")
-    img.src=json_data.avatar_url
-    document.getElementById("content_title").appendChild(img)
-    const username=document.createElement("h1")
-    username.innerHTML=json_data.login
-    document.getElementById("content_title").appendChild(username)
+
+    document.getElementById("content_title").innerHTML=""
+    document.getElementById("main_content").innerHTML=""
+    document.getElementById("content_buttons").innerHTML=""
+    let div1=document.createElement("div")
+    div1.id='div1'
+    document.getElementById("content_title").appendChild(div1)
+    let div2=document.createElement("div")
+    div2.id='div2'
+    document.getElementById("content_title").appendChild(div2)
+
+
+if (json_data.message!="Not Found") {
+	    const img=document.createElement("img")
+	    img.src=json_data.avatar_url
+	    document.getElementById("div1").appendChild(img)
+	
+	    const username=document.createElement("h2")
+	    const name=document.createElement("h2")
+	    username.innerHTML=json_data.login
+	    name.innerHTML=json_data.name!=null?json_data.name:""
+	    document.getElementById("div2").appendChild(name)
+	    document.getElementById("div2").appendChild(username)
+	
+	    const joinyear=json_data.created_at.substring(0,4)
+	    const numrepos=json_data.public_repos
+	    const year=document.createElement("h3")
+	    const repo=document.createElement("h3")
+	    const loc=document.createElement("h3")
+	    const bio=document.createElement("h3")
+	    repo.innerHTML=`${numrepos} public repos`
+	    year.innerHTML=`joined ${joinyear}`
+	    loc.innerHTML=json_data.location
+	    bio.innerHTML=json_data.bio
+	    document.getElementById("main_content").appendChild(year)
+	    document.getElementById("main_content").appendChild(repo)
+	    document.getElementById("main_content").appendChild(loc)
+	    document.getElementById("main_content").appendChild(bio)
+	
+	
+	    const twitter_btn=document.createElement("button")
+	    const blog_portfolio=document.createElement("button")
+	    const Github=document.createElement("button")
+	    twitter_btn.innerHTML="Twitter"
+	    twitter_btn.onclick=()=>{
+	      json_data.twitter_username!=null?parent.open(`https://twitter.com/${json_data.twitter_username}`):alert("They have no twitter")
+	    }
+	    Github.innerHTML="Github"
+	    Github.onclick=()=>{
+	      parent.open(`https://github.com/${json_data.login}`)
+	    }
+	    blog_portfolio.innerHTML="Blog/Portfolio"
+	    blog_portfolio.onclick=()=>{
+	      json_data.blog!=null?parent.open(`${json_data.blog}`):alert("They have no twitter")
+	    }
+	
+	    Github.className="SMLinks"
+	    twitter_btn.className="SMLinks"
+	    blog_portfolio.className="SMLinks"
+	
+	    document.getElementById("content_buttons").appendChild(twitter_btn)
+	    document.getElementById("content_buttons").appendChild(Github)
+	    document.getElementById("content_buttons").appendChild(blog_portfolio)
+} else {
+	alert("User not found")
+}
+
+
 }
 btn.addEventListener("click",searchGitHub)
 
