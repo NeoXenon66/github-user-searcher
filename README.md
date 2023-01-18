@@ -1,7 +1,7 @@
 # Github user searcher
 ![](scr/display-pictures/searcher1.png)
 
-# Shows profile picture, name, username, number of public repos, location etc. ALso has buttons to open github profile,twitter and blog or portfolio
+# Shows profile picture, name, username, number of public repos, location etc. Also has buttons to open github profile,twitter and blog or portfolio
 ![](scr/display-pictures/searcher2.png)
 
 # If some of these are not available it will ommit them, or alert when you use the buttons
