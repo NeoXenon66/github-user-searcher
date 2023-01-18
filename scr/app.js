@@ -59,7 +59,7 @@ if (json_data.message!="Not Found") {
 	    }
 	    blog_portfolio.innerHTML="Blog/Portfolio"
 	    blog_portfolio.onclick=()=>{
-	      json_data.blog!=null?parent.open(`${json_data.blog}`):alert("They have no twitter")
+	      json_data.blog!="" || json_data.blog!=null?parent.open(`${json_data.blog}`):alert("They have no blog or portfolio")
 	    }
 	
 	    Github.className="SMLinks"
@@ -80,6 +80,11 @@ btn.addEventListener("click",searchGitHub)
 //get user input ^
 //append user input/username to the api https://api.github.com/users/(username)
 //returns a data object containing usernames ,social media links etc
+
+
+
+//example
+
 /*
 {
   "login": "Alamin-Juma",
