@@ -9,3 +9,6 @@
 
 # If the user is not found it will display a pop-up or alert saying user not found
 ![](scr/display-pictures/searcher4.png)
+
+# The link to the site is down below
+[Link to website](https://neoxenon66.github.io/github-user-searcher/)
