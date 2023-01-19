@@ -11,4 +11,4 @@
 ![](scr/display-pictures/searcher4.png)
 
 # The link to the site is down below
-[Link to website](https://neoxenon66.github.io/github-user-searcher/)
+[Link to website](<a href="https://neoxenon66.github.io/github-user-searcher/" target="_blank">Google</a>)
